@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="30947D56FD2BC764">
+  <PROJECT FORMAT="1.00" NAME="Blocksystem" AUTHOR="Patr1ckDo" CREATED="2018.07.21 22:03:24" MODIFIED="2018.07.23 22:40:20">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="3" NAME="Start" CREATED="2018.07.23 21:53:52" MODIFIED="2018.07.23 21:53:52">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="7">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Input
+1. Roboter id
+2. Ausrichten (-1 - 1)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Setzen von internen Variablen auf Werte die auf den entsprechenden Roboter, welcher durch die Roboter id ausgewaehlt wurde, angepasst sind (diese Variablen werden auch in allen anderen Bloecken des Blocksystems genutzt)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Setzen der numerischen Variable "Bloecke_Alle_MotorenrichtungUmgekerhtNumerisch" aufgrund der logischen Variable "Bloecke_Alle_MotorenrichtungUmgekerht" auf 1, bzw -1, da dieser Variablentyp in der späteren Anwendung praktikabler ist]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[Falls in den Parametern so eingestellt findet das Ausrichten statt. Erst wird die richtige Geschwindikeit berechnet, anschließen fährt der Roboter diese für eine gewisse, eingestellte, Zahl von Sekunde und warten dannach falls gewuenscht eine gewisse Zeit]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA["Start": Dieser Block muss am Anfang jeden Programmes gesetz werden, da hier alle Variablen, welche später benötigt werden, auf die entsprechendern Werte gesetz werden. Dies geschieht aufgrund der angegebenen Roboter id! Außerdem besteht die möglichkeit Einzusetellen, dass sich der Roboter durch langsames fahren am Anfang ausrichtet, was sich positiv auf die Genauigkeit beim Starten auswirkt.]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="4" NAME="ZurueckgelegteDistanz" CREATED="2018.07.23 22:10:01" MODIFIED="2018.07.23 22:26:00">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="6">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[ZurueckgelegteDistanz]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Input
+
+1. Motor (-1 / 1)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Zuerst wird der Motor ausgelesen (je nach dem welcher durch den Input ausgewählt wurde), anschließend wird die zurueckgelegte Distanz in CM errechnet. Das Ergebnis wird in eine Variable geschrieben]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Das Ergebnis, die zurueckgelegte Distanz in CM, wird aus der zuvor geschirebenen Variable ausgelesen und vom Block zurueckgegeben]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA["Zurueckgelegte Distanz": Dieser Block gibt ähnlich wie der Standart-EV3-Block "Motorumdrehung" aus, wie weit sich ein Motor seit dem letzten zuruecksetzten gedreht hat, im gegensatz zum Standart-EV3-Block gibt dieser Block jedoch die zurueckgelegte Distanz in cm aus, was die Programmierung deutlich erleichtern kann.]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="5" NAME="GeschwindigkeitAendern" CREATED="2018.07.23 22:26:06" MODIFIED="2018.07.23 22:40:20">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="19">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[GeschwindigkeitAendern]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Input
+1. Aktuelle Geschwindigkeit L
+2. Aktuelle Geschwindigkeit R
+3. CM
+
+4. Neue Geschwindigkeit L
+
+5. Neue Geschwindigkeit R]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Abspeichern der Input Werte in Variablen um die Werte später nutzen zu koennen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Ermitteln der Differenz beider Startgeschwindigkeiten und Speichern dieser in eine Variable]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[Ermitteln der Differenz beider Endgeschwindigkeiten und Speichern dieser in eine Variable]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Ermitteln welche Differenz größer ist]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[Ermitteln welcher Motor schneller/langsamer dreht um spaeter am richtigen die Distanz zu messen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[Abspeichern des langsameren Motors fuer spaetere Messungen und durchfuehrung der ersten Distanzmessung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="18" ASSOCIATE="20">
+                <TEXT><![CDATA[Schleife die so lange laeuft bis die gewuenschte Distanz erreicht ist, in jeder Wiederholung der Schleife wird die Motorgeschwindigkeit neu berechnet, so das der Roboter Beschleunigt/Abbremst]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[Auslesen der Distanz am langsameren Motor]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="24">
+                <TEXT><![CDATA[Überprüfung der gemessenen Distanz so das diese (im letzen Durchlauf) nicht höher sein kann als die angegebene CM-Anzahl]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="26">
+                <TEXT><![CDATA[Ermittlung des Anteils der bereits zurueckgelegten Strecke von der gesammten Strecke die zur Beschleunigung / zum Abbremsen benoetigt werden soll]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="28">
+                <TEXT><![CDATA[Berechnung der Geschwindigkeit fuer den linken (B) Motor aufgrund des zuvor berechneten Anteils]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="30">
+                <TEXT><![CDATA[Berechnung der Geschwindigkeit fuer den rechten (C) Motor aufgrund des zuvor berechneten Anteils]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="32">
+                <TEXT><![CDATA[Ansteuern des Motors mit den zuvor berechneten Geschwindigkeiten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="16">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="34">
+                <TEXT><![CDATA[Ueberpruefung ob die zu erreichende Distanz erreicht wurde, falls ja wird die Schleife beendet]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="17">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="20" ASSOCIATE="18">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="18">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="36">
+                <TEXT><![CDATA[Mit diesem Block ist es möglich die Geschwindigkeiten der beiden Motoren (B und C) langsam zu veraendern. Dabei koennen die Motoren auch unterschiedlich schnell laufen, jedoch nicht so, dass ein Motor vorwaerts dreht und der andere ruckwaerts (so wuerde sich der Roboter auf der Stelle drehen). Außerdem kann die Geschwindigkeit im Laufe der Beschleunigung nicht von einem positiven wert auf einen negativen Wert geaendert werden. Des weiteren ist es Empfehlenswert die Geschwindigkeiten so hoch oder so niedrig zu waehlen das die Differenzen der unterschiedlichen Motoren bei sehr niedriger oder sehr hoher Geschwindigkeit einen nicht so großen Einfluss auf die Genauigkeit des Roboters haben. Durch ein langsames aendern der Geschwindigkeit steigt die Genauigkeit!]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="14" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="16" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="21" FROM="20" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="19" FROM="18" TO="22" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="23" FROM="22" TO="24" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="24" TO="26" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="26" TO="28" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="28" TO="30" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="30" TO="32" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="32" TO="34" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="34" TO="20" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>
