@@ -36,7 +36,7 @@ Im Nachfolgenden werden die einzelnen Bloecke des Blocksystems mit ihren Funktio
 ### Start 
 ![Start](Dokumentation/README-Bilder/Block_Start.png)
 
-Dieser Block muss am Anfang jeden Programmes gesetz werden, da hier alle Variablen, welche später benötigt werden, auf die entsprechendern Werte gesetz werden. Dies geschieht aufgrund der angegebenen Roboter id! Außerdem besteht die möglichkeit Einzusetellen, dass sich der Roboter durch langsames fahren am Anfang ausrichtet, was sich positiv auf die Genauigkeit beim Starten auswirkt.
+Dieser Block muss am Anfang jeden Programmes gesetz werden, da hier alle Variablen, welche später benötigt werden, auf die entsprechendern Werte gesetz werden. Dies geschieht aufgrund der angegebenen Roboter id! Außerdem besteht die möglichkeit Einzusetellen, dass sich der Roboter durch langsames fahren am Anfang ausrichtet, was sich positiv auf die Genauigkeit beim Starten auswirkt. Anschließend werden alle Motoren zueuckgesetzt.
 
 | Parameter | Wert | Beschreibung |
 | - | - | - | 
