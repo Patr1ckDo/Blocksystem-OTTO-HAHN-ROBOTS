@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="66E75568E696BD34">
-  <PROJECT FORMAT="1.00" NAME="Blocksystem" AUTHOR="Patr1ckDo" CREATED="2018.07.21 22:03:24" MODIFIED="2018.08.25 19:18:35">
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="B2C52454C2F98077">
+  <PROJECT FORMAT="1.00" NAME="Blocksystem" AUTHOR="Patr1ckDo" CREATED="2018.07.21 22:03:24" MODIFIED="2018.08.25 19:28:44">
     <DIAGRAMS>
       <DIAGRAM FORMAT="1.00" ID="3" NAME="Start" CREATED="2018.07.23 21:53:52" MODIFIED="2018.07.25 11:15:41">
         <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="8">
@@ -63,7 +63,7 @@
           <CONNECTION FORMAT="1.00" ID="14" FROM="13" TO="2" TEXT="" />
         </CONNECTIONS>
       </DIAGRAM>
-      <DIAGRAM FORMAT="1.00" ID="4" NAME="ZurueckgelegteDistanz" CREATED="2018.07.23 22:10:01" MODIFIED="2018.08.21 01:21:42">
+      <DIAGRAM FORMAT="1.00" ID="4" NAME="ZurueckgelegteDistanz" CREATED="2018.07.23 22:10:01" MODIFIED="2018.08.25 19:28:44">
         <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="6">
           <ENTRIES>
             <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
@@ -88,8 +88,8 @@
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="0" ROW="4">
-              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
-                <TEXT><![CDATA[Das Ergebnis, die zurueckgelegte Distanz in CM, wird aus der zuvor geschirebenen Variable ausgelesen und vom Block zurueckgegeben]]></TEXT>
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="11">
+                <TEXT><![CDATA[Das Ergebnis, die zurueckgelegte Distanz in CM, wird aus der zuvor geschriebenen Variable ausgelesen und vom Block zurueckgegeben]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="0" ROW="5">
@@ -107,8 +107,8 @@
         <CONNECTIONS>
           <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="11" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="12" FROM="11" TO="2" TEXT="" />
         </CONNECTIONS>
       </DIAGRAM>
       <DIAGRAM FORMAT="1.00" ID="5" NAME="GeschwindigkeitAendern" CREATED="2018.07.23 22:26:06" MODIFIED="2018.08.21 01:21:42">
