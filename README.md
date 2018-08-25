@@ -69,6 +69,7 @@ Dieser Block muss am Anfang jeden Programmes gesetz werden, da hier alle Variabl
 ![ZurueckgelgteDistanz](Dokumentation/README-Bilder/Block_ZurueckgelegteDistanz.png)
 
 Dieser Block gibt aehnlich wie der Standart-EV3-Block "Motorumdrehung" aus, wie weit sich ein Motor **seit dem letzten zuruecksetzten** gedreht hat, im gegensatz zum Standart-EV3-Block gibt dieser Block jedoch die zurueckgelegte Distanz in cm aus, was die Programmierung deutlich erleichtern kann. 
+
 | Parameter | Wert | Beschreibung |
 | - | - | - |
 | Motor | numerischer Wert (-1 / 1) | Wird hier `-1` angegbenen wird die zurueckgelegte Distanz am linken (B) Motor gemessen. Falls hier `1` angegeben wird am rechten (C) Motor. |
