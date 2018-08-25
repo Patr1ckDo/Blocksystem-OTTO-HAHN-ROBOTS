@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="68676191CEFB4F43">
-  <PROJECT FORMAT="1.00" NAME="Blocksystem" AUTHOR="Patr1ckDo" CREATED="2018.07.21 22:03:24" MODIFIED="2018.08.24 22:58:29">
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="66E75568E696BD34">
+  <PROJECT FORMAT="1.00" NAME="Blocksystem" AUTHOR="Patr1ckDo" CREATED="2018.07.21 22:03:24" MODIFIED="2018.08.25 19:18:35">
     <DIAGRAMS>
       <DIAGRAM FORMAT="1.00" ID="3" NAME="Start" CREATED="2018.07.23 21:53:52" MODIFIED="2018.07.25 11:15:41">
         <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="8">
@@ -561,6 +561,54 @@
           <CONNECTION FORMAT="1.00" ID="78" FROM="77" TO="70" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="79" FROM="72" TO="77" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="80" FROM="75" TO="77" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="8" NAME="CmInUmdrehungen" CREATED="2018.08.25 19:15:13" MODIFIED="2018.08.25 19:18:35">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="6">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[CmInUmdrehungen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Input
+1. CM]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Mithilfe der angegeben CM Anzahl und einer Variable die im Start Block aufgrund der Roboter id, bzw. der hinterlegten Daten, gesetzt wird um Cm in Grad umzurechnen wir die Cm-DIstanz in Umdrehungen umgerechnet]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Die umgerechnete Distanz, nun ich Umdrehungen, wird zurueckgegeben]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[Mit diesem Block ist es moeglich eine Distanz von Zentimeter in Umdrehungen fuer den benutzen Roboter zu errechnen. Dies geschiet aufgrund der Roboter id, welche am Start des Programmes als Parameter des Start-Block angegeben wird, bzw. aufgrund der hinterlegten Daten. So ist es mithilfen von diesem Blockmoeglich auch mit Standart-EV3 Bloecken mit Cm zu programmieren!]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="2" TEXT="" />
         </CONNECTIONS>
       </DIAGRAM>
     </DIAGRAMS>

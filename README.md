@@ -80,6 +80,17 @@ Dieser Block gibt aehnlich wie der Standart-EV3-Block "Motorumdrehung" aus, wie 
 
 
 ### CmInUmdrehungen
+![CmInUmdrehungen](Dokumentation/README-Bilder/Block_CmInUmdrehungen.png)
+
+Mit diesem Block ist es moeglich eine Distanz von Zentimeter in Umdrehungen fuer den benutzen Roboter zu errechnen. Dies geschiet aufgrund der [Roboter id](#roboterprofile), welche am Start des Programmes als Parameter des [Start-Block](#start) angegeben wird, bzw. aufgrund der hinterlegten Daten. So ist es mithilfen von diesem Blockmoeglich auch mit Standart-EV3 Bloecken mit Cm zu programmieren!
+
+| Parameter | Wert | Beschreibung |
+| - | - | - |
+| CM | numerischer Wert | Die Distanz in Cm die in Umdrehungen umgewandelt werden soll. | 
+
+| Ausgabe | Wert | Beschreibung |
+| - | - | - |
+| Umdrehungen | numerischer Wert | Dieser Wert, der vom Block ausgegeben wird, ist die Anzahl der der Cm umgerechnet in Cm. |
 
 
 ### WartenAufDistanz
