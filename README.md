@@ -63,6 +63,20 @@ Dieser Block muss am Anfang jeden Programmes gesetz werden, da hier alle Variabl
 
 
 ### Drehen
+![Drehen](Dokumentation/README-Bilder/Block_Drehen.png)
+
+Dieser Block ermoeglicht es, dass sich der Roboter entweder auf der Stelle mit beiden Motoren, oder nur mit einem der Motoren dreht. Dabei ist es auch moeglich, dass die Motoren langsam beschleunigen und auch langsam wieder abbremsen, *was die Genauigkeit erhoehen kann*. Auch dieser Block **setzt die Motorumdrehungen nicht zurueck!**
+
+![SkizzeWinkel](Dokumentation/README-Bilder/Block_Drehen_SkizzeWinkel.png)
+
+| Parameter | Wert | Beschreibung |
+| - | - | - |
+| Linker Motor | numerischer Wert (-1 - 1) | Mit diesem Parameter wird eingestellt in welche Richtung der Roboter, bzw. der linke Motor drehen soll: Giebt man hier `-1` an, dreht der Linke Motor rueckwaerts, bei `1` vorwaerts und bei `0` bleibt er stehen |
+| Rechter Motor | numerischer Wert (-1 - 1) | Mit diesem Parameter wird, wie auch schon beim Parameter zuvor, die Richtung bestimmt, in die der rechte Motor drehen soll. |
+| Grad Beschleunigen (Winkel) | numerischer Wert (0 - ∞) | Hier wird angegeben wie viel Grad der Roboter sich drehen soll bis er die gewuenschte Geschwindigkeit erreicht hat. Wird hier `0` angegeben startet der Roboter sofort mit der angegebenen Geschwindigkeit und Beschleunigt nicht langsam. |
+| Geschwindigkeit | numerischer Wert (-100 - 100) | Durch diesen Parameter wird kontrolliert wie schnell der Roboter sich drehen soll. Wenn sich nur einer der Motoren dreht, dreht der Roboter dementsprechen hal so schnell, als wenn sich beide Motoren drehen. |
+| Grad Abbremsen (Winkel) | numerischer Wert (0 - ∞) | Wenn der Roboter langsam abbremsen soll, kann hier der Winkel angegeben werden die es dauern soll bis der Roboter von der eingestellten Geschwindigkeit abgebremst hat. Wird hier `0` angegeben bremst der Roboter nicht langsam ab, sondern bleibt sofort stehen. |
+| Winkel Drehen | numerischer Wert (0 - ∞) | Hier wird angegeben um wie viel Grad sich der Roboter insgesammt drehen soll. |
 
 
 ### ZurueckgelegteDistanz
@@ -150,6 +164,13 @@ Damit das Blocksystem mit moeglichst allen Robotern funktioniert ist das komplet
 | Fahren_AbbremsenProzentEndgeschwindigkeit | numerischer Wert (0 - 100) | Wenn der Roboter mithilfe des Fahren-Blocks am Ende langsam Abbremst wird das letze Stueck, nachdem der Roboter langsam abgebremst hat, konstant mit einer langsamen Geschwindigkeit absolviert bis die gewuenschte Distanz entgueltig erreicht wird. Dies traegt zur Genauigkeit bei, ohne dieses langsame Fahren am Ende ist ein genaues Stoppen garnicht moeglich! Mit diesem Parameter wird festgelgt wie viel Prozent der Strecke der Abbrems-Distanz dafuer verwendet wird, mit der Endgeschwindigkeit zu fahren.|
 | Fahren_AbbremsenMaxDistanz Endgeschwindigkeit | numerischer Wert (0 - ∞) | Mit diesem Parameter wird kontrolliert was die maximale DIstanz ist, die mit der zuvor erlaeutertern ENdgeschwindigkeit gefahren wird. Solte die prozentual errechnete Strecke, welche mit dem zuvor erklaerten Parameter errechnet wird, groeßer sein als die hier angegebene Strecke, wird die prozentual errechnete Strecke nicht beachtet und die hier angegebene Stecke wird genutzt. |
 | Fahren_Endgeschwindigkeit | numerischer Wert (0 - 100) | Mit diesem Parameter wird die End-Geschwindigkeit gesteuert, di am Ende des Abbremsens genutzt wird (wie in den beiden Parameter zuvor erklaert). Diese Geschwindigkeit sollte daher moeglichst gering gewaehlt werden, damit der Roboter moeglichst praezise anhalten kann. Sie sollte aber keinesfalls so niefrig gewaehlt werden, dass dei Motoren sehr ungenau oder ungleichmaeßig drehen. |
+| Drehen_StartGeschwindigkeit | numerischer Wert (0 - 100) | Mit diesem Parameter wird eingestellt mit welcher Geschwindigkeit der Roboter beim [Drehen Block](#drehen) anfahren soll. Der Wert sollte so gering wie moeglich gewaehlt werden damit das Anfahren moeglichst genau ist, aber auch nicht so gering, dass die Motoren sehr ungenau oder ungleichmaeßig drehen. |
+| Drehen_GradFuer360Drehung | numerischer Wert (0 - ∞) | Hier wird angegeben wie viel Grad sich ein Motor drehen muss bis sich der Roboter um 360 Grad gedreht hat, wenn sich beide Motoren gleichzeitig drehen. |
+| Drehen_AbbremsenProzentEndgeschwindigkeit | numerischer Wert (0 - 100) | Mit diesem Wert wird eingesetellt wie viel Prozent der Strecke des Abbremsen mit der eingestellten Endgeschwindigkeit zurueckgelegt werden soll. |
+| Drehen_MaxWinkelEndgeschwindigkeit | numerischer Wert (0 - ∞) | Hier wird angegeben wie viel Grad (Winkel) maximal mit der Endgeschwindigkeit zurueckgelegt werden sollen. Ist der Winkel, der durch den zuvor angegebenen Prozentsatz errechnet wird groeßer als dieser Wert, wird dieser Wert genutzt. |
+| Drehen_Endgeschwindigkeit | numerischer Wert (0 - 100) | Mit diesem Parameter wird eingestellt mit welcher Geschwindigkeit der Motor/die Motoren am Ende des Abbremsens drehen, bis der richtige Winkel erreicht ist. |
+| Drehen_SchwelleMotorKorrektion | numerischer Wert (0 - ∞) | Drehen beim Drehen Block beide Motoren wird nur an einem der Motoren aktiv gemessen und der andere Motor laeuft jeweils mit der selben Geschwindidigkeit (in die andere Richtung) einfach mit. Da die Motoren jedoch leicht unterschiedlich drehen koennen kann es so zu Ungenauigkeiten kommen. Um diesem entgegenzuwirken werden auch die Motorumdrehungen des anderen Motors gemessen und mit denen des anderen Motors verglichen. Sollten die Motorenstaende um eine gewisse Gradzahl, die mit diesem Parameter eingesetellt wird, unterschiedlich sein wird gegengesteuert. |
+| Drehen_GeschwindigkeitMotorKorrektion | numerischer Wert (0 - 100) | Sollte die in dem zuvor erlaeuterte Schwelle ueberschritten werden wird der entsprechende Motor um eine gewisse Geschwindigkeit verschnellert oder verlangsamt. Diese Geschwindigkeit kann hier eingestellt werden. |
 
 
 ## Auswahlprogramm
