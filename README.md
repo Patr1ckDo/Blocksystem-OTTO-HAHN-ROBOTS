@@ -64,7 +64,7 @@ Dieser Block muss am Anfang jeden Programmes gesetzt werden, da hier alle Variab
 ### Drehen
 ![Drehen](Dokumentation/README-Bilder/Block_Drehen.png)
 
-Dieser Block ermoeglicht es, dass sich der Roboter entweder auf der Stelle mit beiden Motoren, oder nur mit einem der Motoren dreht. Dabei ist es auch moeglich, dass die Motoren langsam beschleunigen und auch langsam wieder abbremsen, *was die Genauigkeit erhoehen kann*. Auch dieser Block **setzt die Motorumdrehungen nicht zurueck!**
+Dieser Block ermoeglicht es, dass sich der Roboter entweder auf der Stelle mit beiden Motoren, oder nur mit einem der Motoren dreht. Dabei ist es auch moeglich, dass die Motoren langsam beschleunigen und auch langsam wieder abbremsen, *was die Genauigkeit erhoehen kann*. **ACUTUNG: Im gegensatz zu den meisten anderen Bloecken, setzt dieser Block die Motorumdrehungen am Anfang und am Ende zurueck!!!**
 
 ![SkizzeWinkel](Dokumentation/README-Bilder/Block_Drehen_SkizzeWinkel.png)
 
