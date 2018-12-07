@@ -1,4 +1,4 @@
-# **Blocksystem-OTTO-HAHN-ROBOTS** `v0.1`
+# **Blocksystem-OTTO-HAHN-ROBOTS** `v1.0.0`
 
 
 ![Alle Blöcke](Dokumentation/README-Bilder/Alle_Bloecke.png)
@@ -149,7 +149,7 @@ _Beispielprogramme noch nicht hinzugefügt!_
 ## Roboterprofile
 | Roboter id | Roboter / Nutzen | Status |
 | - | - | - |
-| 0 | Rot-Schwarzer-Roboter (Gustav) | Noch nicht erstellt |
+| 0 | Rot-Schwarzer-Roboter (Gustav) | In Benutzung! |
 | 99 | Nur zum Entwickeln und Testen der Blöcke, **nicht Nutzen!** | - |
 
 
