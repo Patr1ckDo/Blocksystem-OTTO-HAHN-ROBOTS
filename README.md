@@ -1,4 +1,4 @@
-# **Blocksystem-OTTO-HAHN-ROBOTS** `v1.0.0`
+# **Blocksystem-OTTO-HAHN-ROBOTS** `v1.0.1`
 
 
 ![Alle Blöcke](Dokumentation/README-Bilder/Alle_Bloecke.png)
@@ -129,7 +129,7 @@ Mit diesem Block ist es möglich die Geschwindigkeiten der beiden Motoren (B und
 | - | - | - |
 | Aktuelle Geschwindigkeit L | numerischer Wert (-100 - 100) | Hier wird die aktuelle Geschwindigkeit, bzw. die Geschwindigkeit, ab der die Beschleunigung beginnen soll für den linken (B) Motor angegeben. **ACHTUNG: Der Wert muss so hoch sein, dass der Roboter sich vorwärts bewegt (also auf keinen Fall `0`).** 
 | Aktuelle Geschwindigkeit R | numerischer Wert (-100 - 100) | Der gleiche Parameter wie der zuvor erklärte Parameter Aktuelle Geschwindigkeit L, nur für den rechten (C) Motor.
-| CM | numerischer Wert (>0 - ∞) | Dieser Parameter ist für die Strecke, die für die Beschleunigung / das Abbremsen gebraucht wird verantwortlich. Gemessen wird die Distanz vom Start des Blockes / der Geschwindigkeitsveränderung bis zum Ende des Blockes / der Geschwindigkeitsveränderung am Motor, welcher in dieser Zeit weniger Strecke zurücklegt (der Motor, der bei einer Kurve innen ist). **Die Motorumdrehungen werden dabei nicht zurückgesetzt.**
+| CM | numerischer Wert (0 - ∞) | Dieser Parameter ist für die Strecke, die für die Beschleunigung / das Abbremsen gebraucht wird verantwortlich. Gemessen wird die Distanz vom Start des Blockes / der Geschwindigkeitsveränderung bis zum Ende des Blockes / der Geschwindigkeitsveränderung (immer positiv) am Motor, welcher in dieser Zeit weniger Strecke zurücklegt (der Motor, der bei einer Kurve innen ist). **Die Motorumdrehungen werden dabei nicht zurückgesetzt.**
 | Neue Geschwindigkeit L | numerischer Wert (-100 - 100) | Hier wird die Geschwindigkeit angegeben, die nach der Beschleunigen / dem Abbremsen, nach der zuvor angegebenen Distanz mit dem linken (B) Motor erreicht sein soll. **ACHTUNG: Auch hier muss der Wert so hoch sein, dass der Roboter sich noch immer vorwärts bewegt (also auf keinen Fall `0`).** 
 | Neue Geschwindigkeit R | numerischer Wert (-100 -100) | Der gleiche Parameter wie der zuvor erklärte Parameter Neue Geschwindigkeit L, nur für den rechten (C) Motor.
 

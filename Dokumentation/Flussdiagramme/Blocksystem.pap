@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="B2C52454C2F98077">
-  <PROJECT FORMAT="1.00" NAME="Blocksystem" AUTHOR="Patr1ckDo" CREATED="2018.07.21 22:03:24" MODIFIED="2018.08.25 19:28:44">
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="F4DC96D8C8ACE502">
+  <PROJECT FORMAT="1.00" NAME="Blocksystem" AUTHOR="Patr1ckDo" CREATED="2018.07.21 22:03:24" MODIFIED="2018.12.13 23:06:51">
     <DIAGRAMS>
       <DIAGRAM FORMAT="1.00" ID="3" NAME="Start" CREATED="2018.07.23 21:53:52" MODIFIED="2018.07.25 11:15:41">
         <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="8">
@@ -111,8 +111,8 @@
           <CONNECTION FORMAT="1.00" ID="12" FROM="11" TO="2" TEXT="" />
         </CONNECTIONS>
       </DIAGRAM>
-      <DIAGRAM FORMAT="1.00" ID="5" NAME="GeschwindigkeitAendern" CREATED="2018.07.23 22:26:06" MODIFIED="2018.08.21 01:21:42">
-        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="19">
+      <DIAGRAM FORMAT="1.00" ID="5" NAME="GeschwindigkeitAendern" CREATED="2018.07.23 22:26:06" MODIFIED="2018.12.13 23:06:51">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="20">
           <ENTRIES>
             <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
               <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
@@ -140,76 +140,81 @@
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="37">
+                <TEXT><![CDATA[Ueberpruefen ob CM Input =0 ist. Falls dies der Fall ist, wird CM auf 0,01 gesetzt, da CM=0 zu komischen, nicht erwuenschtem Verhalten fuehrt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
                 <TEXT><![CDATA[Ermitteln der Differenz beider Startgeschwindigkeiten und Speichern dieser in eine Variable]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="5">
+            <ENTRY COLUMN="0" ROW="6">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="10">
                 <TEXT><![CDATA[Ermitteln der Differenz beider Endgeschwindigkeiten und Speichern dieser in eine Variable]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="6">
+            <ENTRY COLUMN="0" ROW="7">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
                 <TEXT><![CDATA[Ermitteln welche Differenz größer ist]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="7">
+            <ENTRY COLUMN="0" ROW="8">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="14">
                 <TEXT><![CDATA[Ermitteln welcher Motor schneller/langsamer dreht um spaeter am richtigen die Distanz zu messen]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="8">
+            <ENTRY COLUMN="0" ROW="9">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
                 <TEXT><![CDATA[Abspeichern des langsameren Motors fuer spaetere Messungen und durchfuehrung der ersten Distanzmessung]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="9">
+            <ENTRY COLUMN="0" ROW="10">
               <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="18" ASSOCIATE="20">
                 <TEXT><![CDATA[Schleife die so lange laeuft bis die gewuenschte Distanz erreicht ist, in jeder Wiederholung der Schleife wird die Motorgeschwindigkeit neu berechnet, so das der Roboter Beschleunigt/Abbremst]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="10">
+            <ENTRY COLUMN="0" ROW="11">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="22">
                 <TEXT><![CDATA[Auslesen der Distanz am langsameren Motor]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="11">
+            <ENTRY COLUMN="0" ROW="12">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="24">
                 <TEXT><![CDATA[Überprüfung der gemessenen Distanz so das diese (im letzen Durchlauf) nicht höher sein kann als die angegebene CM-Anzahl]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="12">
+            <ENTRY COLUMN="0" ROW="13">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="26">
                 <TEXT><![CDATA[Ermittlung des Anteils der bereits zurueckgelegten Strecke von der gesammten Strecke die zur Beschleunigung / zum Abbremsen benoetigt werden soll]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="13">
+            <ENTRY COLUMN="0" ROW="14">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="28">
                 <TEXT><![CDATA[Berechnung der Geschwindigkeit fuer den linken (B) Motor aufgrund des zuvor berechneten Anteils]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="14">
+            <ENTRY COLUMN="0" ROW="15">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="30">
                 <TEXT><![CDATA[Berechnung der Geschwindigkeit fuer den rechten (C) Motor aufgrund des zuvor berechneten Anteils]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="15">
+            <ENTRY COLUMN="0" ROW="16">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="32">
                 <TEXT><![CDATA[Ansteuern des Motors mit den zuvor berechneten Geschwindigkeiten]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="16">
+            <ENTRY COLUMN="0" ROW="17">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="34">
                 <TEXT><![CDATA[Ueberpruefung ob die zu erreichende Distanz erreicht wurde, falls ja wird die Schleife beendet]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="17">
+            <ENTRY COLUMN="0" ROW="18">
               <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="20" ASSOCIATE="18">
                 <TEXT><![CDATA[]]></TEXT>
               </FIGURE>
             </ENTRY>
-            <ENTRY COLUMN="0" ROW="18">
+            <ENTRY COLUMN="0" ROW="19">
               <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
                 <TEXT><![CDATA[Ende]]></TEXT>
               </FIGURE>
@@ -224,7 +229,7 @@
         <CONNECTIONS>
           <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="37" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="10" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="12" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="14" TEXT="" />
@@ -239,6 +244,7 @@
           <CONNECTION FORMAT="1.00" ID="31" FROM="30" TO="32" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="33" FROM="32" TO="34" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="35" FROM="34" TO="20" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="37" TO="8" TEXT="" />
         </CONNECTIONS>
       </DIAGRAM>
       <DIAGRAM FORMAT="1.00" ID="6" NAME="WartenAufDistanz" CREATED="2018.08.21 01:20:07" MODIFIED="2018.08.21 01:23:48">
